@@ -1,0 +1,28 @@
+---
+- hosts: all
+  sudo: true
+
+  tasks:
+  
+# base
+    # - hostname: name=comp3334
+    # - lineinfile: dest=/etc/hosts regexp='ubuntu-xenial' line='127.0.0.1 ubuntu-xenial' state=present
+    # - lineinfile: dest=/etc/hosts regexp='{{hostname}}' line='127.0.0.1 {{hostname}}' state=present
+    # - shell: sudo bash -c 'hostnamectl set-hostname {{hostname}}'
+
+# eth
+    # - name: stop eth1
+    #   shell: ifdown eth1
+    #   ignore_errors: yes
+
+    # - name: set networking
+    #   template: src="files/interfaces/eth1.cfg.j2" dest="/etc/network/interfaces.d/eth1.cfg"
+      # shell: sudo bash -c "cat files/interfaces/eth1.cfg.j2 >> /etc/network/interfaces"
+
+    # - name: start interface
+    #   #shell: ifup eth1 && ifdown eth1 && ifup eth1
+    #   shell: ifup eth1
+    #   ignore_errors: yes
+
+    # - name: restart interface
+    #   shell: sudo /etc/init.d/networking restart

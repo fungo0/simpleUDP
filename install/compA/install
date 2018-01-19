@@ -1,0 +1,11 @@
+#!/bin/sh
+sudo apt-get update  # To get the latest package lists
+sudo apt-get install build-essential -y
+sudo apt-get install gcc -y
+sudo apt-get install libssl-dev -y
+#https://www.wolfssl.com/docs/wolfssl-manual/ch2/
+cd lib/compA/wolfssl-3.12.2
+./configure --enable-dtls
+sudo make install
+./testsuite/testsuite.test
+cd ../..

@@ -1,0 +1,8 @@
+config.ssh.username = "ubuntu"
+config.ssh.password = "c647609bc20d739b829f52b4"
+
+sudo passwd ubuntu              // change pw
+ubuntu
+sudo usermod -aG vboxsf ubuntu  // enable access to /media
+sudo cp -a /media/sf_vagrant/. /vagrant/
+sudo cp -a /media/sf_home_ubuntu_src/. ~/src/
